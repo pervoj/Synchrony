@@ -3,13 +3,17 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "42",
     "sdk" : "org.gnome.Sdk",
+    "sdk-extensions" : [
+        "org.freedesktop.Sdk.Extension.golang"
+    ],
     "command" : "synchrony",
     "finish-args" : [
         "--share=network",
         "--share=ipc",
         "--socket=fallback-x11",
         "--device=dri",
-        "--socket=wayland"
+        "--socket=wayland",
+        "--talk-name=org.freedesktop.Flatpak"
     ],
     "cleanup" : [
         "/include",
@@ -24,6 +28,42 @@
         "*.a"
     ],
     "modules" : [
+        {
+            "name" : "rclone",
+            "buildsystem" : "simple",
+            "build-options" : {
+                "env" : [
+                    "GOBIN=/app/bin",
+                    "GOROOT=/usr/lib/sdk/golang",
+                    "GOFLAGS=-modcacherw",
+                    "GOPATH=/run/build/rclone/gopath"
+                ],
+                "append-path" : "/usr/lib/sdk/golang/bin",
+                "build-args" : [
+                    "--share=network"
+                ]
+            },
+            "build-commands" : [
+                "make rclone",
+                "install -Dm755 rclone -t ${FLATPAK_DEST}/bin/",
+                "install -Dm644 rclone.1 -t ${FLATPAK_DEST}/share/man/man1/",
+                "install -Dm644 MANUAL.{html,md,txt} -t ${FLATPAK_DEST}/share/doc/"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://github.com/rclone/rclone.git",
+                    "tag" : "v1.58.0",
+                    "commit" : "f9354fff2fcd8e58a4b2581506c3f80702f148b9",
+                    "x-checker-data" : {
+                        "type" : "anitya",
+                        "project-id" : "11750",
+                        "stable-only" : true,
+                        "url-template" : "https://github.com/rclone/rclone/archive/v$version/rclone-$version.tar.gz"
+                    }
+                }
+            ]
+        },
         {
             "name" : "synchrony",
             "builddir" : true,
