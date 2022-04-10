@@ -1,7 +1,6 @@
 data/cz.pervoj.Synchrony.desktop.in
 data/cz.pervoj.Synchrony.appdata.xml.in
 data/cz.pervoj.Synchrony.gschema.xml
+src/application.vala
 src/window.ui
-src/main.vala
 src/window.vala
-

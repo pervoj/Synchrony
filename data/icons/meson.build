@@ -1,13 +1,13 @@
-application_id = 'cz.pervoj.Synchrony'
+icon_dir = join_paths(get_option('datadir'), 'icons', 'hicolor')
 
-scalable_dir = join_paths('hicolor', 'scalable', 'apps')
+# hicolor
 install_data(
-  join_paths(scalable_dir, ('@0@.svg').format(application_id)),
-  install_dir: join_paths(get_option('datadir'), 'icons', scalable_dir)
+  '@0@.svg'.format(app_id),
+  install_dir: join_paths(icon_dir, 'scalable', 'apps')
 )
 
-symbolic_dir = join_paths('hicolor', 'symbolic', 'apps')
+# symbolic
 install_data(
-  join_paths(symbolic_dir, ('@0@-symbolic.svg').format(application_id)),
-  install_dir: join_paths(get_option('datadir'), 'icons', symbolic_dir)
+  '@0@-symbolic.svg'.format(app_id),
+  install_dir: join_paths(icon_dir, 'symbolic', 'apps')
 )

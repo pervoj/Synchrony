@@ -1,13 +1,13 @@
 project('synchrony', ['c', 'vala'],
-          version: '0.1.0',
-    meson_version: '>= 0.59.0',
-  default_options: [ 'warning_level=2',
-                   ],
+  version: '0.1.0',
+  meson_version: '>= 0.59.0',
+  default_options: [ 'warning_level=2' ],
 )
+
 app_id = 'cz.pervoj.Synchrony'
 
 
-add_project_arguments ('-DGETTEXT_PACKAGE=synchrony', language: 'c')
+add_project_arguments('-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()), language: 'c')
 
 
 gnome = import('gnome')

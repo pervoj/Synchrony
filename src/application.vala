@@ -16,41 +16,63 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Synchrony {
-    public class Application : Adw.Application {
-        public Application () {
-            Object (application_id: "cz.pervoj.Synchrony", flags: ApplicationFlags.FLAGS_NONE);
-        }
+public class Synchrony.Application : Adw.Application {
 
-        construct {
-            ActionEntry[] action_entries = {
-                { "about", this.on_about_action },
-                { "preferences", this.on_preferences_action },
-                { "quit", this.quit }
-            };
-            this.add_action_entries (action_entries, this);
-            this.set_accels_for_action ("app.quit", {"<primary>q"});
-        }
-
-        public override void activate () {
-            base.activate ();
-            var win = this.active_window;
-            if (win == null) {
-                win = new Synchrony.Window (this);
-            }
-            win.present ();
-        }
-
-        private void on_about_action () {
-            string[] authors = { "Vojtěch Perník" };
-            Gtk.show_about_dialog (this.active_window,
-                                   "program-name", "synchrony",
-                                   "authors", authors,
-                                   "version", "0.1.0");
-        }
-
-        private void on_preferences_action () {
-            message ("app.preferences action activated");
-        }
+    public Application () {
+        Object (
+            application_id: Constants.APP_ID,
+            flags: ApplicationFlags.FLAGS_NONE
+        );
     }
+
+
+    construct {
+        ActionEntry[] action_entries = {
+            { "about", this.on_about_action },
+            { "preferences", this.on_preferences_action },
+            { "quit", this.quit }
+        };
+        this.add_action_entries (action_entries, this);
+        this.set_accels_for_action ("app.quit", {"<primary>q"});
+    }
+
+
+    public override void activate () {
+        base.activate ();
+        var win = this.active_window;
+        if (win == null) {
+            win = new Synchrony.Window (this);
+        }
+        win.present ();
+    }
+
+
+    public static int main (string[] args) {
+        // enable gettext
+        // https://developer.gnome.org/glib/stable/glib-I18N.html#glib-I18N.description
+        Intl.setlocale (LocaleCategory.ALL, "");
+        Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, Constants.LOCALE_DIR);
+        Intl.bind_textdomain_codeset (Constants.GETTEXT_PACKAGE, "UTF-8");
+        Intl.textdomain (Constants.GETTEXT_PACKAGE);
+
+        var app = new Application ();
+        return app.run (args);
+    }
+
+
+    private void on_about_action () {
+        string[] authors = { "Vojtěch Perník" };
+        Gtk.show_about_dialog (this.active_window,
+            "program-name", _("Synchrony"),
+            "authors", authors,
+            "translator-credits", _("translator-credits"),
+            "version", Constants.VERSION
+        );
+    }
+
+
+    private void on_preferences_action () {
+        message ("app.preferences action activated");
+    }
+
 }

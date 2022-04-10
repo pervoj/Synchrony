@@ -1,19 +1,34 @@
-synchrony_sources = [
-  'main.vala',
+sources = [
   'application.vala',
   'window.vala',
 ]
 
-synchrony_deps = [
+
+dependencies = [
   dependency('libadwaita-1', version: '>= 1.0'),
 ]
 
-synchrony_sources += gnome.compile_resources('synchrony-resources',
-  'synchrony.gresource.xml',
-  c_name: 'synchrony'
+
+config_data = configuration_data()
+config_data.set('VERSION', meson.project_version())
+config_data.set('APP_ID', app_id)
+config_data.set('GETTEXT_PACKAGE', meson.project_name())
+config_data.set('LOCALE_DIR', join_paths(get_option('prefix'), get_option('localedir')))
+
+sources += configure_file(
+  input: 'constants.vala.in',
+  output: 'constants.vala',
+  configuration: config_data
 )
 
-executable('synchrony', synchrony_sources,
-  vala_args: '--target-glib=2.50',  dependencies: synchrony_deps,
+
+sources += gnome.compile_resources('resources',
+  '@0@.gresource.xml'.format(meson.project_name()),
+  c_name: meson.project_name()
+)
+
+
+executable(meson.project_name(), sources,
+  vala_args: '--target-glib=2.50',  dependencies: dependencies,
   install: true,
 )

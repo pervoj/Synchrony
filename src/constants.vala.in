@@ -1,4 +1,4 @@
-/* main.vala
+/* constants.vala.in
  *
  * Copyright 2022 Vojtěch Perník
  *
@@ -16,7 +16,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-int main (string[] args) {
-    var app = new Synchrony.Application ();
-    return app.run (args);
+namespace Synchrony.Constants {
+    const string VERSION = "@VERSION@";
+    const string APP_ID = "@APP_ID@";
+    const string GETTEXT_PACKAGE = "@GETTEXT_PACKAGE@";
+    const string LOCALE_DIR = "@LOCALE_DIR@";
 }
