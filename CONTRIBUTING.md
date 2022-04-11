@@ -7,7 +7,7 @@ You can contribute in **five development segments**. Each of them is
 
 - **🐛 [Bug Reports](#-bug-reports)**
   – if you find a bug
-- **✈️ [Feature Requests](#-feature-requests)**
+- **✈️ [Feature Requests](#%EF%B8%8F-feature-requests)**
   – if you want a new feature
 - **🌍 [Translations](#-translations)**
   – if your language is missing or inclomplete
