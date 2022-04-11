@@ -2,15 +2,15 @@
 <component type="desktop">
 
   <id>cz.pervoj.Synchrony</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>GPL-3.0-or-later</project_license>
   <content_rating type="oars-1.1" />
 
   <name>Synchrony</name>
   <summary>No description</summary>
-	<description>
-	  <p>No description</p>
-	</description>
+    <description>
+      <p>No description</p>
+    </description>
 
   <developer_name>Vojtěch Perník</developer_name>
   <update_contact>develop@pervoj.cz</update_contact>

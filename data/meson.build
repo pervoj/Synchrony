@@ -1,6 +1,6 @@
 desktop_file = i18n.merge_file(
-  input: 'cz.pervoj.Synchrony.desktop.in',
-  output: 'cz.pervoj.Synchrony.desktop',
+  input: '@0@.desktop.in'.format(app_id),
+  output: '@0@.desktop'.format(app_id),
   type: 'desktop',
   po_dir: '../po',
   install: true,
@@ -14,9 +14,10 @@ if desktop_utils.found()
   )
 endif
 
+
 appstream_file = i18n.merge_file(
-  input: 'cz.pervoj.Synchrony.appdata.xml.in',
-  output: 'cz.pervoj.Synchrony.appdata.xml',
+  input: '@0@.appdata.xml.in'.format(app_id),
+  output: '@0@.appdata.xml'.format(app_id),
   po_dir: '../po',
   install: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')
@@ -29,7 +30,8 @@ if appstream_util.found()
   )
 endif
 
-install_data('cz.pervoj.Synchrony.gschema.xml',
+
+install_data('@0@.gschema.xml'.format(app_id),
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
 
@@ -39,5 +41,6 @@ if compile_schemas.found()
     args: ['--strict', '--dry-run', meson.current_source_dir()]
   )
 endif
+
 
 subdir('icons')
