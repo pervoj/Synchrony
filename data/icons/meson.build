@@ -8,6 +8,7 @@ install_data(
 
 # symbolic
 install_data(
-  '@0@-symbolic.svg'.format(app_id),
+  '@0@-symbolic.svg'.format(app_id_prefix),
+  rename: '@0@-symbolic.svg'.format(app_id),
   install_dir: join_paths(icon_dir, 'symbolic', 'apps')
 )
