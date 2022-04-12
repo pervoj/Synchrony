@@ -1,6 +1,5 @@
-data/cz.pervoj.Synchrony.desktop.in
-data/cz.pervoj.Synchrony.appdata.xml.in
-data/cz.pervoj.Synchrony.gschema.xml
+data/synchrony.desktop.in.in
+data/synchrony.appdata.xml.in.in
+data/synchrony.gschema.xml.in
+src/gtk/help-overlay.ui
 src/application.vala
-src/window.ui
-src/window.vala

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="synchrony">
+  <schema id="cz.pervoj.Synchrony" path="@RESOURCE_PATH@/">
+
+    <key name="remotes" type="a(ss)">
+      <default>[]</default>
+      <summary>Remotes</summary>
+      <description>The list of remotes. Contains remote name and ID.</description>
+    </key>
+
+  </schema>
+</schemalist>

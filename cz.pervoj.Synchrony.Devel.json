@@ -1,5 +1,5 @@
 {
-    "app-id" : "cz.pervoj.Synchrony",
+    "app-id" : "cz.pervoj.Synchrony.Devel",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
@@ -68,6 +68,7 @@
             "name" : "synchrony",
             "builddir" : true,
             "buildsystem" : "meson",
+            "config-opts": [ "-Dprofile=development" ],
             "sources" : [
                 {
                     "type" : "dir",

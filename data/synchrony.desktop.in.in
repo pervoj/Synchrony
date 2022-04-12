@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Synchrony
+GenericName=Cloud Synchronizer
+Comment=Sync your clouds
+Exec=synchrony
+Icon=@APP_ID@
+Terminal=false
+Type=Application
+Categories=GTK;Network;Utility;
+StartupNotify=true

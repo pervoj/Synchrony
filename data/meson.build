@@ -1,5 +1,9 @@
 desktop_file = i18n.merge_file(
-  input: '@0@.desktop.in'.format(app_id),
+  input: configure_file(
+    input: '@0@.desktop.in.in'.format(meson.project_name()),
+    output: '@0@.desktop.in'.format(app_id),
+    configuration: config_data
+  ),
   output: '@0@.desktop'.format(app_id),
   type: 'desktop',
   po_dir: '../po',
@@ -16,7 +20,11 @@ endif
 
 
 appstream_file = i18n.merge_file(
-  input: '@0@.appdata.xml.in'.format(app_id),
+  input: configure_file(
+    input: '@0@.appdata.xml.in.in'.format(meson.project_name()),
+    output: '@0@.appdata.xml.in'.format(app_id),
+    configuration: config_data
+  ),
   output: '@0@.appdata.xml'.format(app_id),
   po_dir: '../po',
   install: true,
@@ -31,7 +39,12 @@ if appstream_util.found()
 endif
 
 
-install_data('@0@.gschema.xml'.format(app_id),
+install_data(
+  configure_file(
+    input: '@0@.gschema.xml.in'.format(meson.project_name()),
+    output: '@0@.gschema.xml'.format(app_id),
+    configuration: config_data
+  ),
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
 

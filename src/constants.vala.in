@@ -21,4 +21,5 @@ namespace Synchrony.Constants {
     const string APP_ID = "@APP_ID@";
     const string GETTEXT_PACKAGE = "@GETTEXT_PACKAGE@";
     const string LOCALE_DIR = "@LOCALE_DIR@";
+    const string DATA_DIR = "@DATA_DIR@";
 }
