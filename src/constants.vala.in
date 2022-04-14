@@ -17,9 +17,39 @@
  */
 
 namespace Synchrony.Constants {
+
+    /** project version */
     const string VERSION = "@VERSION@";
+
+
+    /** application ID */
     const string APP_ID = "@APP_ID@";
+
+    /** application ID prefix */
+    const string APP_ID_PREFIX = "@APP_ID_PREFIX@";
+
+    /** application ID suffix */
+    const string APP_ID_SUFFIX = "@APP_ID_SUFFIX@";
+
+
+    /** application resource path */
+    const string RESOURCE_PATH = "@RESOURCE_PATH@";
+
+    /** application resource path prefix */
+    const string RESOURCE_PATH_PREFIX = "@RESOURCE_PATH_PREFIX@";
+
+    /** application resource path suffix */
+    const string RESOURCE_PATH_SUFFIX = "@RESOURCE_PATH_SUFFIX@";
+
+
+    /** GNU GetText package name */
     const string GETTEXT_PACKAGE = "@GETTEXT_PACKAGE@";
+
+    /** locale directory path */
     const string LOCALE_DIR = "@LOCALE_DIR@";
+
+    /** data directory path */
     const string DATA_DIR = "@DATA_DIR@";
+
+
 }

@@ -1,7 +1,8 @@
 sources = [
-  'interfaces/provider.vala',
+  'provider.vala',
   'provider-controller.vala',
-  'providers/dropbox.vala',
+  'remote.vala',
+  'remote-controller.vala',
   'application.vala',
 #  'window.vala',
 ]
