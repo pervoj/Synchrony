@@ -41,7 +41,8 @@ public class Synchrony.Application : Adw.Application {
         base.activate ();
         var win = this.active_window;
         if (win == null) {
-            win = new Synchrony.Window (this);
+            // win = new Synchrony.Window (this);
+            // win = new Gtk.Window ();
         }
         win.present ();
     }
@@ -55,8 +56,30 @@ public class Synchrony.Application : Adw.Application {
         Intl.bind_textdomain_codeset (Constants.GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (Constants.GETTEXT_PACKAGE);
 
-        var app = new Application ();
-        return app.run (args);
+        // create data dir
+        try {
+            var data_dir = File.new_for_path (Constants.DATA_DIR);
+            if (!data_dir.query_exists ())
+                data_dir.make_directory_with_parents ();
+        } catch (Error e) {
+            critical (_("Error creating data directory: %s"), e.message);
+            return 1;
+        }
+
+        // create config file
+        try {
+            var config_file = File.new_build_filename (Constants.DATA_DIR, "rclone.conf");
+            if (!config_file.query_exists ())
+                config_file.create (GLib.FileCreateFlags.NONE);
+        } catch (Error e) {
+            critical (_("Error creating config file: %s"), e.message);
+            return 1;
+        }
+
+        // var app = new Application ();
+        // return app.run (args);
+
+        return 0;
     }
 
 

@@ -1,4 +1,4 @@
-/* window.vala
+/* remote.vala
  *
  * Copyright 2022 Vojtěch Perník
  *
@@ -16,14 +16,16 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Synchrony {
-    [GtkTemplate (ui = "/cz/pervoj/Synchrony/window.ui")]
-    public class Window : Gtk.ApplicationWindow {
-        [GtkChild]
-        private unowned Gtk.Label label;
+public class Synchrony.Remote : Object {
 
-        public Window (Gtk.Application app) {
-            Object (application: app);
-        }
+    public Provider provider { get; construct; }
+    public string id { get; construct; }
+
+    public Remote (Provider provider, string id) {
+        Object (
+            provider: provider,
+            id: id
+        );
     }
+
 }
