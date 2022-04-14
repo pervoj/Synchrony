@@ -53,7 +53,7 @@ config_data.set('RESOURCE_PATH_SUFFIX', resource_path_suffix)
 # GNU GetText package name
 config_data.set('GETTEXT_PACKAGE', meson.project_name())
 
-# data directories
+# data directory paths
 config_data.set('LOCALE_DIR', join_paths(get_option('prefix'), get_option('localedir')))
 config_data.set('DATA_DIR', join_paths(get_option('prefix'), get_option('datadir'), 'synchrony'))
 
