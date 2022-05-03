@@ -15,7 +15,7 @@ Sync your clouds
 
 **Synchrony** is a new way to synchronize clouds in GNOME.
 It is based on [rclone](https://rclone.org/) to provide the ability
-to synchronize any favorite cloud provider.
+to synchronize as much cloud providers as possible.
 
 ## ⚙️ Installing
 
