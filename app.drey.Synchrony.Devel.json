@@ -1,5 +1,5 @@
 {
-    "app-id" : "cz.pervoj.Synchrony.Devel",
+    "app-id" : "app.drey.Synchrony.Devel",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",

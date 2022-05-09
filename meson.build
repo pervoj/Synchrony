@@ -6,8 +6,8 @@ project('synchrony', ['c', 'vala'],
 
 
 
-app_id_prefix = 'cz.pervoj.Synchrony'
-resource_path_prefix = '/cz/pervoj/Synchrony'
+app_id_prefix = 'app.drey.Synchrony'
+resource_path_prefix = '/app/drey/Synchrony'
 
 app_id_suffix = ''
 resource_path_suffix = ''
@@ -55,7 +55,7 @@ config_data.set('GETTEXT_PACKAGE', meson.project_name())
 
 # data directory paths
 config_data.set('LOCALE_DIR', join_paths(get_option('prefix'), get_option('localedir')))
-config_data.set('DATA_DIR', join_paths(get_option('prefix'), get_option('datadir'), 'synchrony'))
+config_data.set('DATA_DIR', join_paths(get_option('prefix'), get_option('datadir'), meson.project_name()))
 
 
 
