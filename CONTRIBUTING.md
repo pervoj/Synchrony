@@ -25,7 +25,7 @@ an **important contribution** that helps fix bugs and further improve the app.
 
 So if you find a bug:
 
-1. Go to **[this page](https://github.com/pervoj/Synchrony/issues)**.
+1. Go to **[this page](https://gitlab.gnome.org/pervoj/Synchrony/-/issues)**.
 2. If you can and have time to do it, **check if the bug has already been reported**.
   - Some bugs might be already **fixed but not pushed to the main branch or released**.
 3. **Report the bug with adequate issue template.** Also try to include few **screenshots**.
@@ -38,7 +38,7 @@ to understanding what users want.
 
 So if you want a new feature:
 
-1. Go to **[this page](https://github.com/pervoj/Synchrony/issues)**.
+1. Go to **[this page](https://gitlab.gnome.org/pervoj/Synchrony/-/issues)**.
 2. If you can and have time to do it, **check if the feature has already been requested**.
   - Some features might be already **implemented but not pushed to the main branch or released**.
 3. **Request the feature with adequate issue template.** Also try to explain **what it should do**, not how it should do it.
@@ -71,10 +71,10 @@ If you want to help me, you have to options:
 2. Fork this repo.
 3. Create a **new branch from the `dev` branch** with some descriptive name.
 4. Do all the changes.
-5. Create a [pull request](https://github.com/pervoj/Synchrony/pulls)
+5. Create a [merge request](https://gitlab.gnome.org/pervoj/Synchrony/-/merge_requests)
    **back to the `dev` branch**.
 
-> **⚠️ WARNING:** I won't merge any pull requests with the target branch set to
+> **⚠️ WARNING:** I won't merge any merge requests with the target branch set to
 > other than `dev`, so make sure that you are creating your branch correctly.
 
 ### Help with long-time maintanance and development
@@ -83,9 +83,9 @@ Well, I'm really glad to see you in this chapter! I really appreciate everyone
 who is interested in my work and wants to work with me!
 
 So if you really have the courage, go to
-[this page](https://github.com/pervoj/Synchrony/issues) and create a new issue
-with the adequate issue template. I'll review your request and give you commit
-access to this repo.
+[this page](https://gitlab.gnome.org/pervoj/Synchrony/-/issues) and create a new
+issue with the adequate issue template. I'll review your request and give you
+commit access to this repo.
 
 
 ## 🎨 Design
