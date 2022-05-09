@@ -1,4 +1,4 @@
-<img alt="Synchrony" src="data/icons/cz.pervoj.Synchrony.svg" align="left">
+<img alt="Synchrony" src="data/icons/app.drey.Synchrony.svg" align="left">
 
 # [WIP] Synchrony
 
