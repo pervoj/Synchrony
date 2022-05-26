@@ -51,7 +51,7 @@ Since this app should help especially beginners with cloud syncing, it is
 
 But since this app is still under development and not released yet, there isn't
 any reason to make translations now. When the app is released, I'll add a link
-to Transifex.
+to GNOME Damned Lies or Transifex.
 
 
 ## 💻 Writing Code
