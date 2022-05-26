@@ -23,8 +23,8 @@ still have an option to run the app from source.
 
 There are two options how to do it:
 
-1. Run the app from [GNOME Builder](https://flathub.org/apps/details/org.gnome.Builder)
-2. Use the following commands to build it with Meson:
+- Run the app from [GNOME Builder](https://flathub.org/apps/details/org.gnome.Builder)
+- Use the following commands to build it with Meson:
 
 ```sh
 meson _build
@@ -34,6 +34,6 @@ sudo meson install -C _build
 ## 👥 Contributing
 
 I'm happy to see you in this chapter! If you are interested in this project,
-I would be glad for any help with development, design and translation.
+I would be glad for any help with development, design and translations.
 
 For more info about contributing please read [this guide](CONTRIBUTING.md).

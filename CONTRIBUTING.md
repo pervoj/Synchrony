@@ -59,7 +59,7 @@ to Transifex.
 Without the code, the application would not exist. So if you would like to help
 with programming it, I would **really appreciate it**.
 
-If you want to help me, you have to options:
+If you want to help me, you have two options:
 
 - [just fix a bug or add a feature](#just-fix-a-bug-or-add-a-feature)
 - [help with long-time maintanance and development](#help-with-long-time-maintanance-and-development)
