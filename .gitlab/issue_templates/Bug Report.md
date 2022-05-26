@@ -19,3 +19,7 @@
 - Device: <!-- desktop computer/tablet/phone/… -->
 - Distribution:
 - App version:
+
+
+
+/label ~bug
