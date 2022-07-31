@@ -17,7 +17,6 @@ You can contribute in **five development segments**. Each of them is
 - **🎨 [Design](#-design)**
   – if you don't like something about the app design
 
-
 ## 🐛 Bug Reports
 
 Bug reporting seems like a worthless little action. But in reality, it's
@@ -29,7 +28,6 @@ So if you find a bug:
 2. If you can and have time to do it, **check if the bug has already been reported**.
   - Some bugs might be already **fixed but not pushed to the main branch or released**.
 3. **Report the bug with adequate issue template.** Also try to include few **screenshots**.
-
 
 ## ✈️ Feature Requests
 
@@ -43,16 +41,12 @@ So if you want a new feature:
   - Some features might be already **implemented but not pushed to the main branch or released**.
 3. **Request the feature with adequate issue template.** Also try to explain **what it should do**, not how it should do it.
 
-
 ## 🌍 Translations
 
-Since this app should help especially beginners with cloud syncing, it is
-**very important** to give them a good experience in their native language.
+To make things easier for beginners, it is **very important** to make the app
+localized.
 
-But since this app is still under development and not released yet, there isn't
-any reason to make translations now. When the app is released, I'll add a link
-to GNOME Damned Lies or Transifex.
-
+In the future I'll add the app to Damned Lies.
 
 ## 💻 Writing Code
 
@@ -66,7 +60,7 @@ If you want to help me, you have two options:
 
 ### Just fix a bug or add a feature
 
-1. So take a look at **[this page](https://github.com/pervoj/Synchrony/issues)**
+1. So take a look at **[this page](https://gitlab.gnome.org/pervoj/Synchrony/-/issues)**
    and **find some interesting bug report or feature request** for you.
 2. Fork this repo.
 3. Create a **new branch from the `dev` branch** with some descriptive name.
@@ -86,7 +80,6 @@ So if you really have the courage, go to
 [this page](https://gitlab.gnome.org/pervoj/Synchrony/-/issues) and create a new
 issue with the adequate issue template. I'll review your request and give you
 commit access to this repo.
-
 
 ## 🎨 Design
 

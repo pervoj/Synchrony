@@ -28,8 +28,8 @@ resource_path = resource_path_prefix + resource_path_suffix
 
 add_project_arguments('-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()), language: 'c')
 
-gnome = import('gnome')
 i18n = import('i18n')
+gnome = import('gnome')
 
 
 
