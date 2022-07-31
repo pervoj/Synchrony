@@ -14,10 +14,10 @@
   <maintainer>
     <foaf:Person>
       <foaf:name>Vojtěch Perník</foaf:name>
-      <foaf:mbox rdf:resource="mailto:develop@pervoj.cz" />
+      <foaf:mbox rdf:resource="mailto:info@pervoj.cz" />
       <foaf:account>
         <foaf:OnlineAccount>
-          <foaf:accountServiceHomepage rdf:resource="https://github.com" />
+          <foaf:accountServiceHomepage rdf:resource="https://gitlab.com" />
           <foaf:accountName>pervoj</foaf:accountName>
         </foaf:OnlineAccount>
       </foaf:account>
