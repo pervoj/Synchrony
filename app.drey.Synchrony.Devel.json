@@ -3,9 +3,6 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
-    "sdk-extensions" : [
-        "org.freedesktop.Sdk.Extension.golang"
-    ],
     "command" : "synchrony",
     "finish-args" : [
         "--share=network",
@@ -28,42 +25,6 @@
     ],
     "modules" : [
         {
-            "name" : "rclone",
-            "buildsystem" : "simple",
-            "build-options" : {
-                "env" : [
-                    "GOBIN=/app/bin",
-                    "GOROOT=/usr/lib/sdk/golang",
-                    "GOFLAGS=-modcacherw",
-                    "GOPATH=/run/build/rclone/gopath"
-                ],
-                "append-path" : "/usr/lib/sdk/golang/bin",
-                "build-args" : [
-                    "--share=network"
-                ]
-            },
-            "build-commands" : [
-                "make rclone",
-                "install -Dm755 rclone -t ${FLATPAK_DEST}/bin/",
-                "install -Dm644 rclone.1 -t ${FLATPAK_DEST}/share/man/man1/",
-                "install -Dm644 MANUAL.{html,md,txt} -t ${FLATPAK_DEST}/share/doc/"
-            ],
-            "sources" : [
-                {
-                    "type" : "git",
-                    "url" : "https://github.com/rclone/rclone.git",
-                    "tag" : "v1.58.0",
-                    "commit" : "f9354fff2fcd8e58a4b2581506c3f80702f148b9",
-                    "x-checker-data" : {
-                        "type" : "anitya",
-                        "project-id" : "11750",
-                        "stable-only" : true,
-                        "url-template" : "https://github.com/rclone/rclone/archive/v$version/rclone-$version.tar.gz"
-                    }
-                }
-            ]
-        },
-        {
             "name" : "blueprint",
             "buildsystem" : "meson",
             "sources" : [
@@ -71,6 +32,31 @@
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
                     "branch" : "main"
+                }
+            ]
+        },
+        {
+            "name" : "rclone",
+            "buildsystem" : "simple",
+            "build-commands" : [
+                "cp rclone ${FLATPAK_DEST}/bin"
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "only-arches" : [
+                        "x86_64"
+                    ],
+                    "url" : "https://github.com/rclone/rclone/releases/download/v1.59.0/rclone-v1.59.0-linux-amd64.zip",
+                    "sha256" : "cb7edcda37ef188dd5461a626f7b66d4c76676bc4cf05cba3bb4850dff3d8a2b"
+                },
+                {
+                    "type" : "archive",
+                    "only-arches" : [
+                        "aarch64"
+                    ],
+                    "url" : "https://github.com/rclone/rclone/releases/download/v1.59.0/rclone-v1.59.0-linux-arm64.zip",
+                    "sha256" : "c95ebf48bcef81e9ee296a803ca77244d111e35a55db9680c78b407ed99bb054"
                 }
             ]
         },
