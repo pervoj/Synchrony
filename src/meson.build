@@ -54,7 +54,7 @@ sources += gnome.compile_resources('resources',
     configuration: config_data
   ),
   c_name: meson.project_name(),
-  dependencies: blueprints
+#   dependencies: blueprints
 )
 
 
