@@ -1,8 +1,8 @@
 <table align="center"><tr><td>
   <h2 align="center">⚠️&ensp;WARNING&ensp;⚠️</h2>
   <h5 align="center">This project is no longer maintained!</h3>
-  <h3 align="center">Switch to [Celeste](https://github.com/hwittenborn/celeste)</h3>
-  <p>I have decided to end the project for the time being to work on other projects, because other faster evolving project, [Celeste](https://github.com/hwittenborn/celeste), doing pretty much the same was released.</p>
+  <h3 align="center">Switch to <a href="https://github.com/hwittenborn/celeste">Celeste</a></h3>
+  <p>I have decided to end the project for the time being to work on other projects, because other faster evolving project, <a href="https://github.com/hwittenborn/celeste">Celeste</a>, doing pretty much the same was released.</p>
 </td></tr></table>
 
 # Synchrony
